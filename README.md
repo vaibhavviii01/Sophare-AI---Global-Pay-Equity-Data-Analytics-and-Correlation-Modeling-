@@ -3,7 +3,7 @@
 **Data-Driven Benchmarking & Financial Correlation Analysis**
 As the lead for data analysis and quality on this capstone project, I developed a production-ready intelligence platform that standardizes gender pay gap (GPG) reporting across the United Kingdom, Ireland, and France. My work focused on transforming heterogeneous regulatory disclosures into a unified analytical framework to help investors and policymakers identify genuine equity leaders.
 
-**🚀 Key Insights & Impact**
+# 🚀 Key Insights & Impact
 During this project, I moved beyond simple data processing to uncover the structural drivers of pay inequality:
 
 **The "Bonus Gap" Signal:** I identified that bonus gaps remain significantly larger than hourly pay gaps (averaging 15–21% in the UK). My analysis showed that while hourly gaps are narrowing, bonus inequality is actually widening in markets like Ireland.
@@ -45,9 +45,38 @@ I led the investigation into whether a company’s commitment to pay equity tran
 
 **4. Data Visualization & Dashboard Design**
 
-I translated my analytical findings into a production-ready React 18.2 dashboard, using Recharts to make complex equity data accessible to non-technical stakeholders.
-Interactive Visual Modules
-Market Overview: I built summary cards and Bar Charts to visualize the distribution of A–F grades across a country’s entire reporting population.
-Company Profile Engine: I designed a search module that generates Line Charts for 2017–2024 pay gap trends and Diverging Bar Charts to compare raw metrics like hourly vs. bonus gaps.
-Industry Heatmaps: I developed a visual heatmap to represent industry-level performance, allowing users to instantly identify sectors with the highest pay disparities.
-Quartile Distribution: I implemented Stacked Bar Charts to visualize the gender breakdown within four distinct pay quartiles for every company.
+In addition to the production dashboard, I developed a suite of advanced data visualizations to perform deep-dive exploratory analysis and sectoral benchmarking. These visualizations allowed me to move from raw data to the specific insights that drive Sophare AI’s scoring methodology.
+
+**Exploratory Data Analysis (EDA) - UK, France, & Ireland**
+I used Python (Matplotlib & Seaborn) to build a statistical "brain" for the project, visualizing the underlying drivers of pay inequality:
+
+**National Trend Analysis:** I created Time-Series Plots to track the steady decline of the UK mean hourly pay gap from 14.34% in 2017 to 12.00% in 2024, confirming a slow but persistent move toward wage equality.
+
+**Distribution & Outlier Detection:** I utilized Boxplots to quantify the spread of hourly and bonus gaps, identifying extreme outliers in sectors like Finance and Education.
+
+**Correlation Heatmaps:** I developed a Feature Correlation Matrix that visually linked pay gaps to quartile representation. This proved a strong negative correlation: as the share of women in the Top Pay Quartile rises, the overall pay gap consistently falls.
+
+**Metric Relationships:** I built Scatter Plots comparing mean vs. median hourly gaps, validating that both metrics serve as consistent indicators of systemic pay disparity.
+
+
+**Tableau Sectoral Benchmarking (UK)**
+
+To provide a more granular, comparative view of the UK market, I designed a Tableau Dashboard focused on six major industry sectors: Education, Finance, Tech, Health, Arts, and Public Administration:
+
+**Sectoral Bubble Charts:** I engineered Individual Bubble Charts for each sector, allowing for a side-by-side comparison of company-level inequality patterns. Each bubble represents a firm, sized and colored to highlight its deviation from the sector average.
+
+**Outlier Investigation:** The dashboard revealed "crazy" insights, such as the Education sector—despite being female-dominated—exhibiting some of the most severe pay gap outliers (up to ~100%), often due to high-level administrative pay disparities.
+
+**Public vs. Private Comparison:** I used these visualizations to contrast the rigid pay structures of Public Administration with the more volatile, high-bonus environments of the Financial and Insurance sectors.
+
+**Technical Implementation**
+
+**Statistical Logic:** All EDA visualizations were sensitivity-checked, ensuring that reporting anomalies (like the 2019 data dip) did not bias the long-term trend analysis.
+
+**Interactivity:** The Tableau dashboard includes dynamic filters that let users drill down from a high-level sector overview to individual company performance rankings.
+
+# 💻 Technical Stack
+**Data Science:** Python (Pandas, NumPy, SciPy), Jupyter Notebooks.
+**Full-Stack API:** FastAPI (Backend), DynamoDB (NoSQL storage for pre-computed aggregations).
+**Visualization:** React 18.2, Material-UI, and Recharts for interactive trend analysis.
+**Cloud Infrastructure:** Deployed via AWS Lambda and API Gateway for serverless scalability.
