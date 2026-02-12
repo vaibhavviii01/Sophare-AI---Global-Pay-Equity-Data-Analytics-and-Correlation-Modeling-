@@ -77,6 +77,9 @@ To provide a more granular, comparative view of the UK market, I designed a Tabl
 
 # 💻 Technical Stack
 **Data Science:** Python (Pandas, NumPy, SciPy), Jupyter Notebooks.
+
 **Full-Stack API:** FastAPI (Backend), DynamoDB (NoSQL storage for pre-computed aggregations).
+
 **Visualization:** React 18.2, Material-UI, and Recharts for interactive trend analysis.
+
 **Cloud Infrastructure:** Deployed via AWS Lambda and API Gateway for serverless scalability.
